@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .site-btn{
+        @apply mt-10 bg-yellow-500 py-2 px-4 rounded-3xl font-serif font-semibold text-white  hover:text-black  transition ease-in-out delay-150 hover:scale-110 duration-300 dark:bg-slate-300 dark:text-black
+    }
+    .section-title{
+        @apply font-bold text-4xl uppercase
+    }
+
+    body{
+        @apply bg-dark
+    }
+    .bg-dark{
+        @apply dark:bg-slate-900 dark:text-white
+    }
+    .site-bg {
+        @apply bg-white bg-dark
+    }
+
+    .nav-item{
+        @apply p-2 font-bold text-lg hover:bg-black hover:text-white hover:shadow-xl hover:rounded-lg uppercase dark:hover:bg-white dark:hover:text-black
+    }
+}
+@layer utilities {
+   
+    .site-text-color{
+        @apply text-yellow-500
+    }
+    
+    .container-xl{
+        @apply  w-4/5 mx-auto
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        @apply font-montserrat
+      }
+   
+      body{
+          @apply font-palanquin 
+      }
+}
+/* 
+h1{
+    font-family:Roboto,'Open Sans', 'Helvetica Neue', sans-serif;
+} */
+
+#portfolio .scroll-img {
+    background-size: cover;
+    background-position: top;
+    transition: all 4s ease-out 0s;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+#portfolio .portfolio-content:hover .scroll-img {
+    background-position: bottom;
+}
+
+.portfolio-content:hover .scroll-content{
+    top:0
+}
+
